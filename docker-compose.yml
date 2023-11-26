@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  auth-api:
+    build:
+      context: ./s6-auth-api-main
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+  msg-api:
+    build:
+      context: ./s6-msg-api-main
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+
+  msgbus-api:
+    build:
+      context: ./s6-msgbus-api-main
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+
+  post-api:
+    build:
+      context: ./s6-post-api-main
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
+
+  user-api:
+    build:
+      context: ./s6-user-api-main
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
